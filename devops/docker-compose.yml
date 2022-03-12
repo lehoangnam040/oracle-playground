@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  db:
+    image: quay.io/maksymbilenko/oracle-12c
+    environment:
+      DBCA_TOTAL_MEMORY: 4096
+    ports:
+      - "8080:8080"
+      - "1521:1521"
+    volumes:
+      - ./oracle-data:/u01/app/oracle
